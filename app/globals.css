@@ -1,0 +1,39 @@
+:root {
+    /* MAIN COLORS */
+    --backgroundColor: #1e2630;
+    --accentColor: #8250CA;
+    --primary: #303b49;
+    --textInactive: #7d838a;
+    --textActive: #ffffff;
+
+    /* SIZES AND PRESETS */
+    --iconSize: 28px;
+    --edgeSpacing: 25px;
+    --borderRadius: 35px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--textInactive);
+    fill: var(--textInactive);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--backgroundColor);
+}
+
+.active-element {
+    color: var(--textActive);
+    fill: var(--textActive);
+    box-shadow: 0px 0px 25px rgb(255, 255, 255, .4);
+}
+
+.active-text {
+    color: var(--textActive);
+    fill: var(--textActive);
+    text-shadow: 0px 0px 10px white;
+    box-shadow: 0px 0px 10px white;
+}

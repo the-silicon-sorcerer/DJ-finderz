@@ -1,0 +1,7 @@
+.container {
+    position: relative;
+    height: var(--iconSize);
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+}
