@@ -2,7 +2,7 @@
 
 import SvgIcon from '../svg-icon/svg-icon.component'
 
-import Home from '@app-svg/Home.svg'
+import Home from '../../public/svg/home.svg'
 import Profile from '@app-svg/profile.svg'
 import Ticket from '@app-svg/ticket.svg'
 import Location from '@app-svg/location.svg'
