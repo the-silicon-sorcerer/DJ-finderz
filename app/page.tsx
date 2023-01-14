@@ -7,6 +7,7 @@ import { EventResponce } from '@/utils/types/general-types'
 import data from '@/utils/sample-data/data.json'
 import bell from '@app-svg/bell.svg'
 import menu from '@app-svg/menu.svg'
+import PageSetter from '@/components/page-setter/page-setter.compoent'
 
 import style from './page.module.css'
 
@@ -17,19 +18,21 @@ const getEvents = async (url: string) => {
 }
 
 export default async function Home() {
-  const res: EventResponce = await getEvents(`${API_URL}/api/events`)
-  const sampleData = data.events[0]
+  // const res: EventResponce = await getEvents(`${API_URL}/api/events`)
+  const sampleData = data
 
   return (
-    <main className={style.main}>
-      <IconGallery svgs={[menu, bell]} />
-      <SearchBox />
-      <div className={style.cardContainer}>
-        {res.data.events.map((event) => {
-          return <EventCard data={event} />
-        })}
-      </div>
-
-    </main>
+    <>
+      <PageSetter pageName='home' />
+      <main className={style.main}>
+        <IconGallery svgs={[menu, bell]} />
+        <SearchBox />
+        <div className={style.cardContainer}>
+          {data.events.map((event) => {
+            return <EventCard data={event} />
+          })}
+        </div>
+      </main>
+    </>
   )
 }

@@ -9,28 +9,26 @@ import Location from '@app-svg/location.svg'
 
 import style from './footer.module.css'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { PageContext } from '@/contexts/pageContext/page.context'
 
 const Footer = () => {
-    const [currentPage, setCurrent] = useState('home')
+    const { page } = useContext(PageContext)
 
-    const onClick = (value: string) => {
-        setCurrent(value)
-    }
     return (
         <div className={style.viewPortFix} >
             <footer className={`${style.container} `}>
-                <Link href='/' onClick={() => onClick('home')}>
-                    <SvgIcon className={currentPage === 'home' && 'active-element'} Src={Home} />
+                <Link href='/'>
+                    <SvgIcon className={page === 'home' && 'active-element'} Src={Home} />
                 </Link>
-                <Link href='/events' onClick={() => onClick('events')}>
-                    <SvgIcon className={currentPage === 'events' && 'active-element'} Src={Ticket} />
+                <Link href='/events'>
+                    <SvgIcon className={page === 'events' && 'active-element'} Src={Ticket} />
                 </Link>
-                <Link href='/events' onClick={() => onClick('map')}>
-                    <SvgIcon className={currentPage === 'map' && 'active-element'} Src={Location} />
+                <Link href='/events'>
+                    <SvgIcon className={page === 'map' && 'active-element'} Src={Location} />
                 </Link>
-                <Link href='/' onClick={() => onClick('profile')}>
-                    <SvgIcon className={currentPage === 'profile' && 'active-element'} Src={Profile} />
+                <Link href='/'>
+                    <SvgIcon className={page === 'profile' && 'active-element'} Src={Profile} />
                 </Link>
             </footer>
         </div>

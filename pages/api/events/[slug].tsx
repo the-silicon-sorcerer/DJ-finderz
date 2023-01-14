@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import data from './data.json'
+import data from '../../../utils/sample-data/data.json'
 import { Event } from '@/utils/types/general-types'
 
 type Data = {

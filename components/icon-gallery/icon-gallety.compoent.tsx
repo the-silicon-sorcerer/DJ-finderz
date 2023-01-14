@@ -1,3 +1,4 @@
+import { randomNum } from '@/utils/helper-functions/random-number';
 import React from 'react';
 
 import SvgIcon from '../svg-icon/svg-icon.component';
@@ -8,10 +9,13 @@ interface IconGalleryProps {
 }
 
 const IconGallery = ({ svgs }: IconGalleryProps) => {
+    const keyedSvgs = svgs.map((svg) => {
+        return { key: randomNum(10000), svg }
+    })
     return (
         <div className={style.container}>
-            {svgs.map((svg) => {
-                return <SvgIcon Src={svg} />
+            {keyedSvgs.map((obj) => {
+                return <SvgIcon key={obj.key} Src={obj.svg} />
             })}
         </div>
     )
