@@ -1,0 +1,14 @@
+.container {
+    background-color: var(--primary);
+    border-radius: var(--borderRadius);
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.container>input {
+    padding-left: 10px;
+    flex: 1;
+    font-size: large;
+
+}

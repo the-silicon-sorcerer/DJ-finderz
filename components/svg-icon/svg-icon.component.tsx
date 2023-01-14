@@ -1,11 +1,16 @@
 import Image from "next/image"
 import style from './svg-icon.module.css'
 
-const SvgIcon = ({ Src }: { Src: any }) => {
+interface SvgIconProps {
+    Src: string
+    className?: string | boolean
+}
+
+const SvgIcon = ({ Src, className = '' }: SvgIconProps) => {
     return (
-        <div className={style.container}>
+        <button className={`${style.container} ${className}`}>
             <Src />
-        </div>
+        </button>
     )
 }
 

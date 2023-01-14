@@ -1,0 +1,16 @@
+.main>* {
+    margin-bottom: 20px;
+}
+
+.cardContainer {
+    width: calc(100% + 25px);
+    height: 350px;
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.cardContainer>* {
+    min-width: 80%;
+    margin-right: 25px;
+}

@@ -9,15 +9,14 @@
     /* SIZES AND PRESETS */
     --iconSize: 28px;
     --edgeSpacing: 25px;
-    --borderRadius: 35px
+    --borderRadius: 20px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--textInactive);
-    fill: var(--textInactive);
+    stroke: var(--textInactive);
 }
 
 body {
@@ -25,15 +24,34 @@ body {
     background-color: var(--backgroundColor);
 }
 
+button {
+    background-color: transparent;
+    border: none;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
 .active-element {
     color: var(--textActive);
     fill: var(--textActive);
-    box-shadow: 0px 0px 25px rgb(255, 255, 255, .4);
+    text-shadow: 0px 0px 10px white;
+}
+
+.active-element>* {
+    color: var(--textActive);
+    fill: var(--textActive);
+
 }
 
 .active-text {
     color: var(--textActive);
     fill: var(--textActive);
     text-shadow: 0px 0px 10px white;
-    box-shadow: 0px 0px 10px white;
 }
