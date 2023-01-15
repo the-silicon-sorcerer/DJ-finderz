@@ -1,9 +1,21 @@
-import style from './image-overlay.module.css'
+import style from "./image-overlay.module.css";
 
-const ImageOverlay = ({ opacity }: { opacity: string }) => {
-    return (
-        <div className={style.overlay} style={{ opacity: opacity }}></div>
-    )
+interface ImageOverlayProps {
+  opacity: string;
+  linear?: boolean;
 }
 
-export default ImageOverlay
+const ImageOverlay = ({ opacity, linear = false }: ImageOverlayProps) => {
+  const version = linear
+    ? "linear-gradient(180deg, transparent, rgb(0,0,0, 0.3), black)"
+    : "";
+
+  return (
+    <div
+      className={style.overlay}
+      style={{ opacity: opacity, backgroundImage: version }}
+    ></div>
+  );
+};
+
+export default ImageOverlay;

@@ -1,18 +1,18 @@
-import { Inter } from '@next/font/google'
-import Footer from '@/components/footer/footer.compoent'
+import { Inter } from "@next/font/google";
+import Footer from "@/components/footer/footer.compoent";
 
-import { PageContextProvider } from '@/contexts/pageContext/page.context'
-import style from './layout.module.css'
-import './globals.css'
+import { PageContextProvider } from "@/contexts/pageContext/page.context";
+import style from "./layout.module.css";
+import "../globals.css";
 
-const inter = Inter()
+const inter = Inter();
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode,
+  children: React.ReactNode;
 }) {
-  console.log()
+  console.log();
   return (
     <html lang="en" className={inter.className}>
       <head />
@@ -23,8 +23,7 @@ export default function RootLayout({
             <Footer />
           </main>
         </PageContextProvider>
-
       </body>
-    </html >
-  )
+    </html>
+  );
 }

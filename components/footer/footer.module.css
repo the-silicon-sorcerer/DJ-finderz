@@ -1,15 +1,15 @@
 .viewPortFix {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--primary);
-    border-radius: var(--borderRadius);
-    margin: var(--edgeSpacing);
-    padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+  border-radius: var(--borderRadius);
+  margin: var(--edgeSpacing);
+  padding: 25px 30px;
 }

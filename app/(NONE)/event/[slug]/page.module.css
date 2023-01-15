@@ -1,0 +1,68 @@
+.main {
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.icons {
+  width: 100%;
+  padding: var(--edgeSpacing);
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  fill: var(--textActive);
+}
+
+.svg {
+  fill: var(--textActive);
+  stroke: var(--textActive);
+}
+
+.titles {
+  position: absolute;
+  width: 100%;
+  padding: var(--edgeSpacing);
+  padding-bottom: 0px;
+  bottom: 10px;
+  color: var(--textActive);
+}
+
+.title {
+  margin-bottom: 15px;
+  font-size: x-large;
+}
+
+.times {
+  display: flex;
+}
+
+.times > * {
+  font-size: medium;
+  padding-right: 40px;
+  margin-bottom: 10px;
+}
+
+.description {
+  padding: var(--edgeSpacing);
+  color: var(--textInactive);
+}
+
+.description > h3 {
+  margin-bottom: 10px;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.description > p {
+  font-size: small;
+  font-weight: 200;
+  line-height: 1.2rem;
+}

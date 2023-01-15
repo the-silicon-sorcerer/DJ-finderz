@@ -1,57 +1,56 @@
 :root {
-    /* MAIN COLORS */
-    --backgroundColor: #1e2630;
-    --accentColor: #8250CA;
-    --primary: #303b49;
-    --textInactive: #7d838a;
-    --textActive: #ffffff;
+  /* MAIN COLORS */
+  --backgroundColor: #1e2630;
+  --accentColor: #8250ca;
+  --primary: #303b49;
+  --textInactive: #7d838a;
+  --textActive: #ffffff;
 
-    /* SIZES AND PRESETS */
-    --iconSize: 28px;
-    --edgeSpacing: 25px;
-    --borderRadius: 20px;
+  /* SIZES AND PRESETS */
+  --iconSize: 28px;
+  --edgeSpacing: 25px;
+  --borderRadius: 20px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    stroke: var(--textInactive);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  stroke: var(--textInactive);
 }
 
 body {
-    height: 100vh;
-    background-color: var(--backgroundColor);
+  height: 100vh;
+  background-color: var(--backgroundColor);
 }
 
 button {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 input {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 .active-element {
-    color: var(--textActive);
-    fill: var(--textActive);
-    text-shadow: 0px 0px 10px white;
+  color: var(--textActive);
+  fill: var(--textActive);
+  text-shadow: 0px 0px 10px white;
 }
 
-.active-element>* {
-    color: var(--textActive);
-    fill: var(--textActive);
-
+.active-element > * {
+  color: var(--textActive);
+  fill: var(--textActive);
 }
 
 .active-text {
-    color: var(--textActive);
-    fill: var(--textActive);
-    text-shadow: 0px 0px 10px white;
+  color: var(--textActive);
+  fill: var(--textActive);
+  text-shadow: 0px 0px 10px white;
 }

@@ -1,18 +1,22 @@
 export interface Event {
-    "id": string
-    "name": string
-    "slug": string
-    "venue": string
-    "address": string
-    "performers": string
-    "date": string,
-    "time": string
-    "description": string
-    "image": string
+  id: string;
+  name: string;
+  slug: string;
+  venue: string;
+  address: string;
+  performers: string;
+  date: string;
+  time: string;
+  description: string;
+  image: string;
 }
 
 export interface EventResponce {
-    data: {
-        events: Event[]
-    }
+  data: {
+    events: Event[];
+  };
+}
+
+export interface EventSlug {
+  0: Event;
 }
