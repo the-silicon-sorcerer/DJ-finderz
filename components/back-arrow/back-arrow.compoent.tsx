@@ -11,7 +11,7 @@ const BackArrow = ({ className }: { className: string }) => {
 
   return (
     <div onClick={() => router.back()}>
-      <SvgIcon className={style.svg} Src={arrow} />;
+      <SvgIcon className={style.svg} Src={arrow} />
     </div>
   );
 };
