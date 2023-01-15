@@ -11,7 +11,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log();
   return (
     <html lang="en" className={inter.className}>
       <head />

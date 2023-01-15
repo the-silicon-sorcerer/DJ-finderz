@@ -17,9 +17,10 @@ const getEvents = async (url: string) => {
 };
 
 export default async function Home() {
-  // const res: EventResponce = await getEvents(`${API_URL}/api/events`)
+  const res: EventResponce = await getEvents(
+    `${process.env.API_URL}/events?populate=*`
+  );
   const sampleData = data;
-
   return (
     <>
       <PageSetter pageName="home" />
@@ -27,8 +28,8 @@ export default async function Home() {
         <IconGallery svgs={[menu, bell]} />
         <SearchBox />
         <div className={style.cardContainer}>
-          {data.events.map((event) => {
-            return <EventCard data={event} />;
+          {res.data.map((event) => {
+            return <EventCard key={event.id} data={event.attributes} />;
           })}
         </div>
       </main>

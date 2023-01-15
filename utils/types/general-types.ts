@@ -1,5 +1,13 @@
-export interface Event {
-  id: string;
+export interface CloudnaryImage {
+  data: {
+    id: number;
+    attributes: {
+      url: string;
+    };
+  };
+}
+
+export interface EventAttributes {
   name: string;
   slug: string;
   venue: string;
@@ -8,13 +16,16 @@ export interface Event {
   date: string;
   time: string;
   description: string;
-  image: string;
+  image: CloudnaryImage;
+}
+
+export interface Event {
+  id: number;
+  attributes: EventAttributes;
 }
 
 export interface EventResponce {
-  data: {
-    events: Event[];
-  };
+  data: Event[];
 }
 
 export interface EventSlug {
